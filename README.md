@@ -10,41 +10,26 @@ This project solves the persistent issue of satellite data gaps (due to cloud co
 Our model, **SpectraFlow-Net**, utilizes a specialized architecture for multispectral reconstruction.
 
 ```mermaid
-graph LR
-    subgraph Inputs
-        FA[Frame A: t-1]
-        FC[Frame C: t+1]
+flowchart LR
+
+    A["Frame A (t-1)"] --> ENC
+    C["Frame C (t+1)"] --> ENC
+
+    subgraph ENC["Encoder Blocks"]
+        B1["RGB"]
+        B2["Red-Edge"]
+        B3["NIR"]
+        B4["SWIR"]
     end
 
-    subgraph Encoder Blocks
-        B1[RGB Residual Block]
-        B2[Red-Edge Residual Block]
-        B3[NIR Residual Block]
-        B4[SWIR Residual Block]
-    end
+    ENC --> MHA["Multi-Head Attention"]
+    MHA --> NORM["Layer Norm"]
+    NORM --> PROJ["Feature Projection"]
 
-    subgraph Fusion Engine
-        MHA[Multi-Head Attention]
-        Norm[Layer Norm]
-        Proj[1x1 Projection 256-D]
-    end
-
-    subgraph Decoder Block
-        D1[Conv2D 128]
-        D2[Conv2D 64]
-        Final[Sigmoid Output]
-    end
-
-    FA --> Encoder_Blocks
-    FC --> Encoder_Blocks
-    Encoder_Blocks --> MHA
-    MHA --> Norm
-    Norm --> Proj
-    Proj --> D1
-    D1 --> D2
-    D2 --> Final
+    PROJ --> D1["Conv2D 128"]
+    D1 --> D2["Conv2D 64"]
+    D2 --> OUT["Predicted Frame B (t0)"]
 ```
-
 ---
 
 ## 🛠 Key Features
