@@ -116,17 +116,18 @@ python visualize_prediction.py
 
 ## 👨‍💻 Team
 
-Developed for **ISRO Hackathon 2026**
-**Amogha Karanth Uchila**
-JSS Academy of technical Education / IIT Madras
+Developed for **ISRO Hackathon 2026**   
 
-**Atharva Joshi**
-JSS Academy of Technical Education
+**Amogha Karanth Uchila**  
+JSS Academy of technical Education / IIT Madras    
 
-**Anubhab Choudhury**
-JSS Academy of Technical Education
+**Atharva Joshi**   
+JSS Academy of Technical Education   
 
-**Harsh Raj Singh**
-JSS Academy of Technical Education
+**Anubhab Choudhury**    
+JSS Academy of Technical Education    
+
+**Harsh Raj Singh**    
+JSS Academy of Technical Education    
 
 __**Team Aphelion**__
