@@ -9,7 +9,7 @@ This project solves the persistent issue of satellite data gaps (due to cloud co
 
 Our model, **SpectraFlow-Net**, utilizes a specialized architecture for multispectral reconstruction.
 
-```text
+```mermaid
 graph LR
     subgraph Inputs
         FA[Frame A: t-1]
