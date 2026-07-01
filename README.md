@@ -1,4 +1,4 @@
-# SpectraVision: AI-Driven Multispectral Satellite Imagery Synthesis
+# SpectraVision: AI-Driven Multispectral Satellite Imagery Synthesis by Aphelion
 
 SpectraVision is a custom deep-learning pipeline designed for **Bharatiya Antariksh Hackathon 2026**.  
 This project solves the persistent issue of satellite data gaps (due to cloud cover or revisit rates) by generating high-fidelity predicted spectral frames using a time-series triplet approach.
@@ -116,5 +116,17 @@ python visualize_prediction.py
 
 ## 👨‍💻 Team
 
-Developed for **ISRO Hackathon 2026**  
-**Team SpectraVision**
+Developed for **ISRO Hackathon 2026**
+**Amogha Karanth Uchila**
+JSS Academy of technical Education / IIT Madras
+
+**Atharva Joshi**
+JSS Academy of Technical Education
+
+**Anubhab Choudhury**
+JSS Academy of Technical Education
+
+**Harsh Raj Singh**
+JSS Academy of Technical Education
+
+__**Team Aphelion**__
